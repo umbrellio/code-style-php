@@ -1,9 +1,24 @@
 {
   "name": "umbrellio/code-style-php",
+  "description": "Umbrellio php code style.",
+  "keywords": ["umbrellio", "code-style"],
+  "license": "MIT",
+  "homepage": "https://github.com/umbrellio/code-style-php",
+  "support": {
+    "issues": "https://github.com/umbrellio/code-style-php/issues",
+    "source": "https://github.com/umbrellio/code-style-php"
+  },
+  "authors": [
+    {
+      "name": "Vitaliy Lazeev",
+      "email": "vetal@umbrellio.biz"
+    }
+  ],
   "type": "library",
   "require": {
     "php": "^7.2",
     "symplify/easy-coding-standard": "^5.0"
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
