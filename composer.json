@@ -1,0 +1,9 @@
+{
+  "name": "umbrellio/code-style-php",
+  "type": "library",
+  "require": {
+    "php": "^7.2",
+    "symplify/easy-coding-standard": "^5.0"
+  },
+  "minimum-stability": "stable"
+}

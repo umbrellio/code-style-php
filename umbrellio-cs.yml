@@ -1,0 +1,30 @@
+imports:
+  - { resource: '%vendor_dir%/symplify/easy-coding-standard/config/clean-code.yml' }
+  - { resource: '%vendor_dir%/symplify/easy-coding-standard/config/psr12.yml' }
+  - { resource: '%vendor_dir%/symplify/easy-coding-standard/config/common.yml' }
+  - { resource: '%vendor_dir%/symplify/easy-coding-standard/config/symplify.yml' }
+
+services:
+  PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer: ~
+  SlevomatCodingStandard\Sniffs\Namespaces\ReferenceUsedNamesOnlySniff:
+    allowPartialUses: true
+
+parameters:
+  skip:
+    PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer: ~
+    Symplify\CodingStandard\Sniffs\Naming\TraitNameSniff: ~
+    Symplify\CodingStandard\Sniffs\Naming\InterfaceNameSniff: ~
+    Symplify\CodingStandard\Sniffs\Naming\ClassNameSuffixByParentSniff: ~
+    Symplify\CodingStandard\Sniffs\Naming\AbstractClassNameSniff: ~
+    Symplify\CodingStandard\Sniffs\Commenting\VarConstantCommentSniff: ~
+    Symplify\CodingStandard\Fixer\Commenting\BlockPropertyCommentFixer: ~
+    Symplify\CodingStandard\Fixer\Naming\PropertyNameMatchingTypeFixer: ~
+    Symplify\CodingStandard\Fixer\Import\ImportNamespacedNameFixer: ~
+    SlamCsFixer\FinalInternalClassFixer: ~
+    Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenStaticFunctionSniff: ~
+    Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff: ~
+    Symplify\CodingStandard\Sniffs\Architecture\ExplicitExceptionSniff: ~
+    SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff: ~
+    PHP_CodeSniffer\Standards\Generic\Sniffs\CodeAnalysis\AssignmentInConditionSniff: ~
+    SlevomatCodingStandard\Sniffs\Classes\TraitUseDeclarationSniff: ~
+    PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer: ~
