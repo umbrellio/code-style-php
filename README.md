@@ -4,7 +4,7 @@ Settings used in [Umbrellio](https://umbrellio.biz) php projects.
 
 ---
 
-## Installation
+### Installation
 
 Install via composer:
 
@@ -21,7 +21,7 @@ imports:
 
 ---
 
-## Usage
+### Usage
 
 Run in CLI:
 
@@ -29,12 +29,12 @@ Run in CLI:
 vendor/bin/ecs check src --fix --config=ecs.yml
 ```
 
----
-
-## Dependencies (and Links)
+### Dependencies (and Links)
 
 - [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) - used library.
 - [code-style](https://github.com/umbrellio/code-style) - linter settings for other languages.
+
+---
 
 ## License
 
