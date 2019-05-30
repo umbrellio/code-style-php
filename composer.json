@@ -12,6 +12,10 @@
     {
       "name": "Vitaliy Lazeev",
       "email": "vetal@umbrellio.biz"
+    },
+    {
+      "name": "Umbrellio",
+      "email": "oss@umbrellio.biz"
     }
   ],
   "type": "library",
