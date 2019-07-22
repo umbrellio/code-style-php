@@ -21,7 +21,7 @@
   "type": "library",
   "require": {
     "php": "^7.2",
-    "symplify/easy-coding-standard": "^5.0"
+    "symplify/easy-coding-standard": "^6.0"
   },
   "minimum-stability": "stable",
   "prefer-stable": true
