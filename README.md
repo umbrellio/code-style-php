@@ -19,6 +19,26 @@ imports:
   - { resource: vendor/umbrellio/code-style-php/umbrellio-cs.yml }
 ```
 
+If major version of [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) 9 or higher
+create config `ecs.php`:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\ValueObject\Option;
+
+return static function(ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+
+    $parameters->set(Option::SETS, [
+        'vendor/umbrellio/code-style-php/umbrellio-cs.php'
+    ]);
+};
+```
+
 ---
 
 ### Usage
@@ -27,6 +47,12 @@ Run in CLI:
 
 ```
 vendor/bin/ecs check src --fix --config=ecs.yml
+```
+
+or:
+
+```
+vendor/bin/ecs check src --fix --config=ecs.php
 ```
 
 ### Dependencies (and Links)
