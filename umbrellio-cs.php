@@ -7,19 +7,16 @@ use PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer;
 use PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer;
 use PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\ValueObject\Option;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
 return static function(ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
     $services = $containerConfigurator->services();
 
-    $parameters->set(Option::SETS, [
-        SetList::CLEAN_CODE,
-        SetList::PSR_12,
-        SetList::COMMON,
-        SetList::SYMPLIFY,
-    ]);
+    $containerConfigurator->import(SetList::CLEAN_CODE);
+    $containerConfigurator->import(SetList::PSR_12);
+    $containerConfigurator->import(SetList::COMMON);
+    $containerConfigurator->import(SetList::SYMPLIFY);
 
     $services->set(DeclareStrictTypesFixer::class);
     $services->set('SlevomatCodingStandard\Sniffs\Namespaces\ReferenceUsedNamesOnlySniff')
